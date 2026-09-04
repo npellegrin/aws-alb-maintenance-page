@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #2c3e50;
+  color: #ecf0f1;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 80px;
+  max-width: 600px;
+}
+
+.ball-container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.ball {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #00f2fe 0%,
+    #00a8ff 40%,
+    #0066ff 70%,
+    #003399 100%
+  );
+  position: relative;
+  box-shadow:
+    0 10px 20px rgba(0, 168, 255, 0.4),
+    inset 0 -5px 10px rgba(255, 255, 255, 0.2);
+  animation: bounce 1s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(-50px);
+    animation-timing-function: ease-in;
+  }
+}
